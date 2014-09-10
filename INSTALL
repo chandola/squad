@@ -1,0 +1,13 @@
+Basic Installation
+The squad package requires fftw3 libary (version 3.2) available for download at
+http://www.fftw.org/download.html. Make sure that the include and library files for fft library are installed in one of the known paths - /usr/local/lib, /usr/lib, $PREFIXPATH/lib.
+
+=========================
+INSTALL:
+tar -zxvf squad-x.y.tar.gz
+cd squad-x.y
+./configure --prefix $PREFIXPATH
+make;make install
+========================
+
+For more detailed instructions refer to http://www.cs.umn.edu/~chandola/squad/downloads/squad_manual.pdf

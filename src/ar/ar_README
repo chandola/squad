@@ -1,0 +1,31 @@
+Anomaly Detection Using AutoRegression:
+=======================================
+Learns an AR(p) model from the training time series. For testing, each observation is assigned an anomaly score as equal to the Mahalanobis distance from the predicted value (using the AR model).
+
+This technique assumes that each time series is normalized.
+ARTrain
+=======
+Learn an AR model from the training time series data.
+
+Usage:
+./ARTrain -i inputfilename -m modelfilename -d order [-l method)]
+
+-i      Input file name containing one time series per line
+	Each line is a space separated string of floats
+-m      File where the AR model will be saved
+-d      Order of AR model [1 .. 100]
+-l      Method used for parameter estimation
+        0 Least Squares (default)
+        1 Max Entropy
+
+ARPredict
+==========
+Assign anomaly score to each observation of each test time series based on its distance from the value predicted by the AR model. The output is of the same format as the input test data, with an anomaly score for every observation.
+
+Usage:
+./ARPredict -i inputfilename -o outputfilename -m modelfilename
+
+-i      Input file name containing one time series per line
+        Each line is a space separated string of floats
+-o      Output file where the anomaly scores are written out
+-m      File containing the AR model

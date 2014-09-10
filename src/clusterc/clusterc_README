@@ -1,0 +1,6 @@
+Clustering based anomaly detection technique (CLUSTER) for time series. Training uses k-mean clustering to find k clusters for the given time series data. Supports multiple distance/similarity functions. Only DTW is supported for time series data with unequal lengths. Also supports crosscorrelation similarity measure.
+
+TRAINING CLUSTER
+
+To train, run CLUSTERCTrain. Output of CLUSTERCTrain is a set of centroids corresponding to the k clusters.
+

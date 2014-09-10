@@ -1,0 +1,11 @@
+Segmentation based anomaly detection technique as described by Chan and Mahoney 2005.
+
+Assign anomaly score to each test time series based on how well it fits the FSA learnt from the training data. The output is a single anomaly score for each test time series.
+Usage:
+./BOX -i -trainfilename -t testfilename -k numboxes -r numrandomrestarts -o outputfilename
+
+-i      input training file name
+-t      input testing file name
+-o      output file
+-k      number of boxes
+-r      number of random restarts

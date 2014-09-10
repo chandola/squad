@@ -1,0 +1,10 @@
+AM_LDFLAGS = -L$(libdir) 
+INCLUDES = -I$(includedir) 
+LDADD = -ltools
+bin_PROGRAMS = FSATrain FSAPredict FSAzPredict STIDEPredict
+EXTRA_DIST = FSA.h
+FSATrain_SOURCES = FSATrain.cpp FSA.cpp
+FSAPredict_SOURCES = FSAPredict.cpp FSA.cpp
+FSAzPredict_SOURCES = FSAzPredict.cpp FSA.cpp
+STIDEPredict_SOURCES = STIDEPredict.cpp FSA.cpp
+dist_doc_DATA = fsa_README

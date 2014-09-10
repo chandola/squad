@@ -1,0 +1,37 @@
+Time Series Anomaly Detection Package (squad version 0.1):
+Maintained by : Varun Chandola
+		chandola@cs.umn.edu
+
+For Installation instructions read INSTALL
+For instructions for individual programs read $INSTALL_DIR/share/doc/squad/$program_README
+----------------------------------------------
+The squad package is a collection of multiple anomaly detection tools written in C++ to detect anomalies in univariate discrete sequences as well as univariate time series.
+
+Data format:
+A sequence data base is a file containing one sequence per line and each value separated with space. For discrete sequences the "symbols" are denoted with a positive number. For time series data, the sequences consist of floating point values.
+
+----------------------------------------------
+Discrete Sequence Anomaly Detection. The details of the algorithms are provided at http://www-users.cs.umn.edu/~chandola/ICDM08.
+Following utilities are provided:
+1. CLUSTERDTrain and CLUSTERDPredict for cluster based anomaly detection.
+2. KNND for k-nearest neighbor based anomaly detection.
+3. WIND and WIND_MAX for window based anomaly detection.
+4. HMMTrain and HMMPredict for HMM based anomaly detection.
+5. FSATrain and FSAPredict for extended finite state automata based anomaly detection.
+6. STIDEPredict for state based window anomaly detection using the FSATrain to construct the eFSA.
+7. FSAzPredict for a vairant of FSAPredict. Uses FSATrain to construct the eFSA.
+8. GenHmm to construct an HMM for generating synthetic data.
+9. HMMGenseq to generate synthetic sequences from the HMM constructed using GenHmm.
+10. findsimd to compute pairwise similarity between two databases of discrete sequences.
+
+---------------------------------------------
+Time Series Anomaly Detection. The details of the algorithms are provided at http://www-users.cs.umn.edu/~chandola/timeseries.
+Following utilities are provided:
+1. CLUSTERCTrain and CLUSTERCPredict for cluster based anomaly detection.
+2. KNNC and KNNC_TOP for k-nearest neighbor based anomaly detection.
+3. WINC and WINC_MAX for window based anomaly detection.
+4. ARTrain and ARPredict for auto regression based anomaly detection.
+5. SVRTrain and SVRPredict for SVR based anomaly detection.
+6. BOX for Box modeling based anomaly detection.
+7. SAXConv and SAXGenalphamap to convert time series into discrete sequences using the SAX approach by Lin et al (http://www.cs.ucr.edu/~eamonn/SAX.htm).
+8. findsimc to compute pairwise similarity between two databases of time series.
